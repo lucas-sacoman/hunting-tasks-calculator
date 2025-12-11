@@ -7,8 +7,8 @@ type DifficultLevel = "begginer" | "adept" | "expert" | "master";
 
 export const HomeScreen = () => {
   const [difficult, setDifficult] = useState<DifficultLevel | null>(null);
-  const [completedKillTasks, setCompletedKillTasks] = useState<number>(1);
-  const [completedDeliveryTasks, setCompletedDeliveryTasks] = useState<number>(1);
+  const [completedKillTasks, setCompletedKillTasks] = useState<number>(0);
+  const [completedDeliveryTasks, setCompletedDeliveryTasks] = useState<number>(0);
 
   const deliveryTaskPoints = 75;
   const totalCompletedTasks = completedKillTasks + completedDeliveryTasks;
