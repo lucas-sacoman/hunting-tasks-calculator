@@ -23,8 +23,6 @@ export const HomeScreen = () => {
   const handleMultiplier = () => {
     if (!difficult) return 1;
 
-    console.log("Total Completed Tasks:", totalCompletedTasks);
-
     if (totalCompletedTasks >= 4 && totalCompletedTasks < 8) {
       return 2;
     } else if (totalCompletedTasks >= 8 && totalCompletedTasks < 12) {
@@ -42,8 +40,6 @@ export const HomeScreen = () => {
     if (!difficult || !completedKillTasks || !completedDeliveryTasks) return 0;
 
     const pointsPerTask = pointsbyDifficult[difficult] || 0;
-
-    console.log(handleMultiplier());
 
     return (completedKillTasks * pointsPerTask + completedDeliveryTasks * deliveryTaskPoints) * handleMultiplier();
   };
